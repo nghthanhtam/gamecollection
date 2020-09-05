@@ -3,6 +3,8 @@ import mongodb from "mongodb";
 import bodyParser from "body-parser";
 
 const app = express();
+var cors = require("cors");
+app.use(cors());
 app.use(bodyParser.json());
 const dbUrl = "mongodb://localhost/crudwithredux";
 
@@ -36,6 +38,23 @@ mongodb.MongoClient.connect(dbUrl, { useUnifiedTopology: true }, function (
 ) {
   //const database = db.db("crudwithredux");
   const database = firebase.firestore();
+
+  app.get("/", (req, res) => {
+    const { spawn } = require("child_process");
+    var dataToSend;
+    // spawn new child process to call the python script
+    const python = spawn("python", ["script.py"]);
+    // collect data from script
+    python.stdout.on("data", function (data) {
+      console.log("Pipe data from python script ...");
+      dataToSend = JSON.parse(data);
+    });
+    // in close event we are sure that stream from child process is closed
+    python.on("close", (code) => {
+      // send data to browser
+      res.json({ data: dataToSend });
+    });
+  });
 
   //#region read
 
