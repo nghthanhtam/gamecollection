@@ -11,12 +11,17 @@ class TitlePane extends React.Component {
   render() {
     let { title } = this.props;
     return (
-      <div className="pane-wrapper">
-        <div className="line"></div>
-        <div className="title">
-          <h3>{title}</h3>
+      <div className="outer-wrapper">
+        <div className="pane-wrapper">
+          <div className="line"></div>
+          <div className="title">
+            <h3>{title}</h3>
+          </div>
+          <div className="line"></div>
         </div>
-        <div className="line"></div>
+        <Link to="product-list" className="text">
+          Shop Now
+        </Link>
       </div>
     );
   }

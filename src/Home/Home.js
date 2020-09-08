@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Category from "./Category/Category";
 import TitlePane from "./TitlePane/TitlePane";
 import Product from "./Product/Product";
+import Keyword from "./Product/Keyword";
 
 class Home extends React.Component {
   constructor(props) {
@@ -34,9 +35,28 @@ class Home extends React.Component {
           description: "Guns, Swords, Figures",
           picLink: "./img/toy.png",
         },
-        5,
+        {
+          name: "Video Games",
+          description: "Games",
+          picLink: "./img/game.png",
+        },
+        {
+          name: "Stuff",
+          description: "Others",
+          picLink: "./img/stuff.png",
+        },
       ],
-      productList: [1, 2, 3, 4, 5, 6],
+      productList: [1, 2, 3, 4, 5, 6, 7, 8],
+      keywords: [
+        { color: "kw-blue" },
+        { color: "kw-violet" },
+        { color: "kw-red" },
+        { color: "kw-green" },
+        { color: "kw-blue" },
+        { color: "kw-violet" },
+        { color: "kw-red" },
+        { color: "kw-green" },
+      ],
       header: "header",
       picLink: "./img/blue.png",
       section: "section-blue",
@@ -78,23 +98,21 @@ class Home extends React.Component {
   };
 
   render() {
-    let { categoryList, productList } = this.state;
+    let { categoryList, productList, keywords } = this.state;
     const settings = {
       dots: true,
       infinite: true,
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
-
       className: "slides",
     };
-    const settingsCate = {
+    const settingsKW = {
       infinite: true,
       speed: 1000,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1800,
+      slidesToShow: 6,
+      slidesToScroll: 3,
+      className: "slider",
     };
     return (
       <div>
@@ -251,20 +269,45 @@ class Home extends React.Component {
         </Slider>
 
         <TitlePane title="BROWSE YOUR CATEGORY" />
-
-        <div className="sliderwrapper">
-          <Slider className="catewrapper" {...settingsCate}>
+        <div className="list-wrapper">
+          <div className="cate-grid">
             {categoryList.map((cate) => {
               return <Category cate={cate} />;
             })}
-          </Slider>
+          </div>
         </div>
 
+        <TitlePane title="Best Sellers in Septemper" />
         <div className="list-wrapper">
           <div className="grid">
             {productList.map(() => {
               return <Product />;
             })}
+          </div>
+        </div>
+
+        <TitlePane title="Top Adventure Movie Products" />
+        <div className="list-wrapper">
+          <div className="grid">
+            {productList.map(() => {
+              return <Product />;
+            })}
+          </div>
+        </div>
+
+        <div className="container-kw">
+          <div className="title-kw">HOT KEYWORDS</div>
+          <div className="sliderwrapper">
+            <Slider
+              style={{
+                width: "76%",
+              }}
+              {...settingsKW}
+            >
+              {keywords.map((item) => {
+                return <Keyword item={item} />;
+              })}
+            </Slider>
           </div>
         </div>
       </div>

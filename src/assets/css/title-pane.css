@@ -4,6 +4,14 @@
   font-family: "Lato", sans-serif;
 }
 
+.pane-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-wrapper {
+  padding: 60px 0px 0px 0px;
+}
 .title {
   height: 50px;
   width: 300px;
@@ -14,14 +22,19 @@
   align-items: center;
 }
 .line {
-  width: 290px;
+  width: 362px;
   background-color: white;
   border-top: 2px solid #c8c8c8;
 }
-.pane-wrapper {
-  padding: 30px 30px 0 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15px;
+.text {
+  margin-left: 245px;
+  font-size: 18px;
+  color: #4477b2;
+  cursor: pointer;
+}
+.text:hover {
+  margin-left: 245px;
+  font-size: 18px;
+  color: #89abd2;
+  cursor: pointer;
 }

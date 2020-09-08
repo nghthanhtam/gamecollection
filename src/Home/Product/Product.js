@@ -1,6 +1,5 @@
 import React from "react";
 import "../../assets/css/product.css";
-import { Link } from "react-router-dom";
 
 class Product extends React.Component {
   constructor(props) {
@@ -9,10 +8,11 @@ class Product extends React.Component {
   }
 
   render() {
+    let { name, description, filePath, price } = this.props;
     return (
       <div className="product-card">
         <h1>Original Shoes</h1>
-        <p>Lorem isperedkfjalskd dklfjd dfjs as</p>
+        <p>Saved: $4</p>
         <img className="product-pic" src="./img/blue.png" alt="product" />
         <div className="product-info">
           <div className="product-price">90$</div>

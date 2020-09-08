@@ -6,6 +6,8 @@ import GameFormPage from "./GameFormPage";
 import test from "./test";
 import testMenu from "./TestMenu";
 import Home from "./Home/Home";
+import ProductList from "./Home/ProductList";
+import ProductDetail from "./Home/Product/ProductDetail";
 
 function App() {
   return (
@@ -28,11 +30,14 @@ function App() {
     // </div>
     <div>
       <Route exact path="/games" component={GamesPage} />
+      <Route path="/games/add" component={GameFormPage} />
+      <Route path="/game/:_id" component={GameFormPage} />
+
       <Route exact path="/test" component={test} />
       <Route exact path="/menu" component={testMenu} />
       <Route exact path="/home" component={Home} />
-      <Route path="/games/add" component={GameFormPage} />
-      <Route path="/game/:_id" component={GameFormPage} />
+      <Route exact path="/product-list" component={ProductList} />
+      <Route exact path="/product-detail" component={ProductDetail} />
     </div>
   );
 }
