@@ -7,9 +7,9 @@ class TitlePane extends React.Component {
     super(props);
     this.state = {};
   }
-
+  componentDidMount = () => {};
   render() {
-    let { title } = this.props;
+    let { title, isNotShop } = this.props;
     return (
       <div className="outer-wrapper">
         <div className="pane-wrapper">
@@ -19,9 +19,11 @@ class TitlePane extends React.Component {
           </div>
           <div className="line"></div>
         </div>
-        <Link to="product-list" className="text">
-          Shop Now
-        </Link>
+        {!isNotShop ? (
+          <Link to="./product-list" className="text">
+            Shop Now
+          </Link>
+        ) : null}
       </div>
     );
   }

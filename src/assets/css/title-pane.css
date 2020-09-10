@@ -16,24 +16,24 @@
   height: 50px;
   width: 300px;
   border: 2px solid #c8c8c8;
-  z-index: 2;
+  /* z-index: 2; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .line {
-  width: 362px;
+  width: 440px;
   background-color: white;
   border-top: 2px solid #c8c8c8;
 }
 .text {
-  margin-left: 245px;
+  margin-left: 165px;
   font-size: 18px;
   color: #4477b2;
   cursor: pointer;
 }
 .text:hover {
-  margin-left: 245px;
+  margin-left: 165px;
   font-size: 18px;
   color: #89abd2;
   cursor: pointer;
