@@ -98,6 +98,7 @@
   font-weight: 400;
   margin-left: 40px;
   text-decoration: none;
+  align-items: center;
 }
 
 .header1 {
@@ -135,6 +136,7 @@
   font-weight: 400;
   margin-left: 40px;
   text-decoration: none;
+  align-items: center;
 }
 
 .content {
@@ -226,7 +228,7 @@
   bottom: 0;
   z-index: 1;
   width: 100%;
-  height: 350px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,6 +244,7 @@
   width: 200px;
 }
 .shopnow {
+  padding-top: 50px;
   display: flex;
 }
 .shopnow .shop {
@@ -294,4 +297,8 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.row-flex-center {
+  display: flex;
+  align-items: center;
 }

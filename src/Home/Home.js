@@ -9,11 +9,12 @@ import Category from "./Category/Category";
 import TitlePane from "./TitlePane/TitlePane";
 import Product from "./Product/Product";
 import Keyword from "./Product/Keyword";
-import Banner from "../assets/dominator.png";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 class Home extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       categoryList: [
         {
@@ -68,26 +69,10 @@ class Home extends React.Component {
       section: "section-blue",
       left: 0,
     };
-    this.handleScroll = this.handleScroll.bind(this);
+
     this.changePic = this.changePic.bind(this);
   }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-  handleScroll = () => {
-    if (window.scrollY > 10) {
-      this.setState({ header: "header1" });
-    } else {
-      this.setState({ header: "header" });
-    }
-    this.setState({
-      left: (-window.scrollY * 0.5).toString() + "px",
-    });
-  };
+  componentDidMount() {}
 
   changePic = (e) => {
     console.log(e.target.alt);
@@ -129,23 +114,8 @@ class Home extends React.Component {
     };
     return (
       <div>
-        <div className={this.state.header}>
-          <Link className="logo" to="/">
-            Logo
-          </Link>
-          <ul>
-            <li>
-              <Link className="item" to="/">
-                Cart
-              </Link>
-            </li>
-            <li>
-              <Link className="item" to="/">
-                Profile
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <Header />
+
         <div
           style={{
             zIndex: 10,
@@ -301,7 +271,7 @@ class Home extends React.Component {
 
           <TitlePane title="Best Sellers in Septemper" />
           <div className="list-wrapper">
-            <div className="grid">
+            <div className="grid-home">
               {productList.map(() => {
                 return <Product />;
               })}
@@ -310,7 +280,7 @@ class Home extends React.Component {
 
           <TitlePane title="Top Adventure Movie Products" />
           <div className="list-wrapper">
-            <div className="grid">
+            <div className="grid-home">
               {productList.map(() => {
                 return <Product />;
               })}
@@ -336,7 +306,7 @@ class Home extends React.Component {
           <div className="container-for-you">
             <div className="title-for-you">ONLY FOR YOU</div>
             <div className="list-wrapper">
-              <div className="grid">
+              <div className="grid-home">
                 {productList.map(() => {
                   return <Product />;
                 })}
@@ -362,7 +332,7 @@ class Home extends React.Component {
 
           <div className="banner-wrapper">
             <img
-              style={{ width: "900px", zIndex: 1, marginRight: "-100px" }}
+              style={{ width: "900px", marginRight: "-60px", zIndex: 13 }}
               alt="banner"
               src="./img/banner.png"
             />
@@ -384,41 +354,14 @@ class Home extends React.Component {
 
           <TitlePane title="Top Adventure Movie Products" />
           <div className="list-wrapper">
-            <div className="grid">
+            <div className="grid-home">
               {productList.map(() => {
                 return <Product />;
               })}
             </div>
           </div>
         </div>
-
-        <footer className="fixed-footer">
-          <div className="shopnow">
-            <div className="shop">SHOP</div>
-            <div className="now">NOW</div>
-          </div>
-          <div className="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-          </div>
-          <div className="social">
-            <div>
-              <i className="fa fa-facebook"></i>
-            </div>
-            <div>
-              <i className="fa fa-instagram"></i>
-            </div>
-            <div>
-              <i className="fa fa-twitter"></i>
-            </div>
-          </div>
-          <div className="footer-cate">
-            <div>Trending</div>
-            <div>Best Seller</div>
-            <div>All Products</div>
-            <div>Wishlist</div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }
