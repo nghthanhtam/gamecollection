@@ -132,8 +132,9 @@ class ProductDetail extends React.Component {
                   <input
                     style={{
                       width: "50px",
-                      height: "37px",
+                      height: "36px",
                       textAlign: "center",
+                      border: "1px solid #ccc",
                     }}
                   />
 
@@ -246,7 +247,10 @@ class ProductDetail extends React.Component {
                   <i className="fa fa-star-half-o"></i>
                 </div>
                 <p>Nhận xét của bạn</p>
-                <textarea className="reply-box"></textarea>
+                <textarea
+                  placeholder="Viết nhận xét tại đây"
+                  className="reply-box"
+                ></textarea>
                 <div className="row-flex">
                   <Button
                     style={{

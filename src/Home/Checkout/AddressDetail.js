@@ -2,6 +2,9 @@ import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "../../assets/css/cart.css";
 
+import Radio from "@material-ui/core/Radio";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+
 class Cart extends React.Component {
   constructor(props) {
     super();
@@ -9,10 +12,15 @@ class Cart extends React.Component {
   }
 
   render() {
+    let { item } = this.props;
     return (
-      <div className="ui checkbox">
-        <input type="checkbox" className="example" />
-        <label className="label-chkbox">Nguyễn Huỳnh Thanh Tâm</label>
+      <div>
+        <FormControlLabel
+          color="default"
+          value={item._id}
+          control={<Radio color="default" />}
+          label={item.label}
+        />
         <div className="address-box">
           <div className="add">
             <p className="add1">Địa chỉ:</p>

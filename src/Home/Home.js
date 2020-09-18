@@ -119,9 +119,10 @@ class Home extends React.Component {
         <div
           style={{
             zIndex: 10,
-            marginBottom: "400px",
+            marginBottom: "300px",
             position: "relative",
-            backgroundColor: "#fff",
+            // backgroundColor: "#fff",
+            backgroundColor: "#f7f7f7",
           }}
         >
           <Slider {...settings}>

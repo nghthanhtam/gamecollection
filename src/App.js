@@ -10,6 +10,7 @@ import ProductList from "./Home/Product/ProductList";
 import ProductDetail from "./Home/Product/ProductDetail";
 import Cart from "./Home/Checkout/Cart";
 import Payment from "./Home/Checkout/Payment";
+import OrderReceipt from "./Home/Checkout/OrderReceipt";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Route exact path="/product-detail" component={ProductDetail} />
       <Route exact path="/checkout/cart" component={Cart} />
       <Route exact path="/checkout/payment" component={Payment} />
+      <Route exact path="/order-received" component={OrderReceipt} />
     </div>
   );
 }

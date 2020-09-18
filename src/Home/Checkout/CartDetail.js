@@ -59,8 +59,9 @@ class CartDetail extends React.Component {
           <input
             style={{
               width: "50px",
-              height: "37px",
+              height: "35px",
               textAlign: "center",
+              border: "1px solid #ccc",
             }}
           />
           <div

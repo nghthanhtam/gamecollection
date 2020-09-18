@@ -20,8 +20,9 @@
   transition: 0.5s;
 }
 .product-card {
-  width: 237px;
-  background: #ecedef;
+  width: 230px;
+  /* background: #ecedef; */
+  background: white;
   padding: 20px;
   position: relative;
   text-transform: uppercase;
@@ -29,7 +30,7 @@
 }
 
 .product-card:hover {
-  width: 237px;
+  width: 227px;
   background: #dae3f3;
   padding: 20px;
   position: relative;
@@ -43,6 +44,7 @@
 .product-card h1 {
   font-size: 15px;
   margin-bottom: 4px;
+  color: #0d1136;
 }
 .product-card .p {
   font-size: 4px;
@@ -64,17 +66,24 @@
 }
 .product-btn {
   margin-left: auto;
-  color: grey;
+  color: #3571a7;
   text-decoration: none;
-  border: 2px solid;
+  border: 1px solid;
   padding: 5px 15px;
   border-radius: 18px;
   transition: 0.4s linear;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.product-btn i {
+  font-size: 22px;
 }
 .product-btn:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  background-color: #3571a7;
+  color: white;
 }
 
 .list-wrapper {
@@ -86,15 +95,15 @@
   display: inline-grid;
   flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
 }
 .grid-home {
   display: inline-grid;
   flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
 }
 
 /* PRODUCT DETAIL */
@@ -106,12 +115,14 @@
   align-items: center;
 
   z-index: 10;
-  margin-bottom: 400px;
+  margin-bottom: 300px;
   position: relative;
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
+
 .card1 {
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: white;
   width: 80%;
   border-radius: 8px;
   display: flex;
@@ -131,6 +142,7 @@
 }
 .infor > * {
   margin: 5px;
+  color: #0d1136;
 }
 .infor .price {
   display: flex;
@@ -196,11 +208,12 @@
   height: 40px;
   width: 45%;
   border-radius: 50px;
-  background-color: #000;
+  background-color: #0d1136;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  transition: 0.3s linear;
 }
 .cart-btn i {
   margin-right: 20px;
@@ -241,8 +254,9 @@
   height: 100%;
 }
 .recommend-pane {
-  margin-left: 150px;
+  margin-left: 153px;
   margin-bottom: -30px;
+  color: #0d1136;
 }
 .grid-option {
   display: inline-grid;
@@ -251,7 +265,8 @@
   margin-top: -8px;
 }
 .mes-wrapper {
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: white;
   border-radius: 8px;
   width: 80%;
 }
@@ -260,10 +275,10 @@
   display: flex;
 }
 .ava {
-  border-radius: 40px;
+  border-radius: 42px;
   width: 90px;
   height: 90px;
-  background-color: #fff;
+  background-color: rgb(236, 235, 235);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,6 +313,7 @@
   resize: none;
   box-sizing: border-box;
   padding: 10px;
+  border: 1px solid #ccc;
 }
 .comments {
   font-size: 18px;
@@ -355,14 +371,19 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Geneva, Tahoma,
     sans-serif;
+  color: #0d1136;
 }
 .filter-list {
   display: flex;
   flex-direction: column;
-  padding: 0 15px 10px 10px;
+  padding: 0 35px 10px 0;
+  color: #0d1136;
 }
 .filter-list .ui {
   margin-bottom: 5px;
+}
+.filter-list .ui label {
+  color: #0d1136;
 }
 .price-filter {
   display: flex;
@@ -381,7 +402,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #3571a7;
   color: white;
 }
 .price-inp {
@@ -405,6 +426,7 @@
   margin-bottom: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  color: #0d1136;
 }
 .row-flex {
   display: flex;
@@ -419,6 +441,7 @@
   margin: 3px;
   background-color: #ecedef;
   border: none;
+  color: #0d1136;
 }
 .tag:hover {
   cursor: pointer;
@@ -427,6 +450,6 @@
   align-items: center;
   height: 30px;
   padding: 20px;
-  background-color: #000;
+  background-color: #3571a7;
   color: white;
 }

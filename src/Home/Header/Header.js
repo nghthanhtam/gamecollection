@@ -36,21 +36,36 @@ class Header extends React.Component {
         </Link>
         <ul className="row-flex-center  ">
           <li>
-            <Link className="item" to="/cart">
-              <div>Cart</div>
-              <div className="col-flex">
+            <Link
+              className="item"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#0d1136",
+                padding: "8px",
+                borderRadius: "7px",
+              }}
+              to="/cart"
+            >
+              <div style={{ color: "white" }}>Cart</div>
+              <div>
                 <div
                   style={{
-                    flex: 1,
-                    borderRadius: "30px",
-                    width: "20px",
+                    marginLeft: "5px",
+                    backgroundColor: "transparent",
+                    color: "white",
                     border: "1px solid white",
-                    textAlign: "center",
+                    width: "17px",
+                    height: "18px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: "13px",
                   }}
                 >
                   1
                 </div>
-                <div style={{ flex: 1, color: "transparent" }}>2</div>
               </div>
             </Link>
           </li>

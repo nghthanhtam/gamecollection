@@ -128,6 +128,7 @@
   font-size: 18px;
   margin-left: 164px;
   margin-bottom: -25px;
+  color: #0d1136;
 }
 .box {
   display: flex;
@@ -193,6 +194,7 @@
   font-size: 18px;
   margin-left: 162px;
   margin-bottom: 15px;
+  color: #0d1136;
 }
 /* browsing history */
 .container-his {

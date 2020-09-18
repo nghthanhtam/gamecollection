@@ -70,7 +70,8 @@ class ProductList extends React.Component {
             zIndex: 10,
             marginBottom: "400px",
             position: "relative",
-            backgroundColor: "#fff",
+            // backgroundColor: "#fff",
+            backgroundColor: "#f7f7f7",
           }}
         >
           <div className="nohome-section">
@@ -196,7 +197,7 @@ class ProductList extends React.Component {
             <div className="column-flex">
               <div className="filter-pane">
                 <div>Showing 1-12 of 40 results</div>
-                <div className="row-flex">
+                <div className="row-flex-center">
                   <div style={{ marginRight: "10px" }}>Sort By</div>
                   <div>
                     <select class="ui dropdown">
@@ -219,7 +220,7 @@ class ProductList extends React.Component {
             </div>
           </div>
           <div style={{ marginTop: "50px" }}>
-            <h3 style={{ margin: "0 0 -20px 150px" }}>
+            <h3 style={{ margin: "0 0 -20px 155px", color: "#0d1136" }}>
               PRODUCTS RELATED TO THIS MOVIE
             </h3>
             <div className="sliderwrapper">
@@ -235,7 +236,7 @@ class ProductList extends React.Component {
               </Slider>
             </div>
             <div style={{ marginTop: "15px" }}>
-              <h3 style={{ margin: "0 0 -20px 150px" }}>
+              <h3 style={{ margin: "0 0 -20px 155px", color: "#0d1136" }}>
                 SIMILAR PRODUCTS INSPIRED BY THIS ITEM
               </h3>
               <div className="sliderwrapper">
