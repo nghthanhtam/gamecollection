@@ -35,7 +35,7 @@ class OrderReceipt extends React.Component {
         <div className="receipt-container">
           <div className="order-res-card">
             <div className="res-infor">
-              <div className="btn">Quay lại trang chủ</div>
+              <div className="btn-home">Quay lại trang chủ</div>
               <h1>Đặt hàng thành công</h1>
               <p>Cảm ơn! Bạn đã đặt hàng thành công</p>
               <div className="sumup">

@@ -292,7 +292,7 @@
   display: flex;
   margin-bottom: 30px;
 }
-.btn {
+.btn-home {
   border-radius: 8px;
   margin-left: 620px;
 
@@ -304,7 +304,7 @@
   align-items: center;
   transition: 0.3s linear;
 }
-.btn:hover {
+.btn-home:hover {
   background-color: #3571a7;
   color: white;
   cursor: pointer;

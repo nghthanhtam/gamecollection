@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Link, Route } from "react-router-dom";
+import { Route, Router } from "react-router-dom";
 import GamesPage from "./GamesPage";
 import GameFormPage from "./GameFormPage";
 import test from "./test";
@@ -11,6 +11,8 @@ import ProductDetail from "./Home/Product/ProductDetail";
 import Cart from "./Home/Checkout/Cart";
 import Payment from "./Home/Checkout/Payment";
 import OrderReceipt from "./Home/Checkout/OrderReceipt";
+import Account from "./Home/User/Account";
+import history from "./Home/history";
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
     //   <Route path="/games/add" component={GameFormPage} />
     //   <Route path="/game/:_id" component={GameFormPage} />
     // </div>
-    <div>
+    <Router history={history}>
       <Route exact path="/games" component={GamesPage} />
       <Route path="/games/add" component={GameFormPage} />
       <Route path="/game/:_id" component={GameFormPage} />
@@ -43,8 +45,9 @@ function App() {
       <Route exact path="/product-detail" component={ProductDetail} />
       <Route exact path="/checkout/cart" component={Cart} />
       <Route exact path="/checkout/payment" component={Payment} />
-      <Route exact path="/order-received" component={OrderReceipt} />
-    </div>
+      <Route exact path="/checkout/order-received" component={OrderReceipt} />
+      <Route exact path="/user/account" component={Account} />
+    </Router>
   );
 }
 

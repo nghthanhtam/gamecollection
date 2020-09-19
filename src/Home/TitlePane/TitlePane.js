@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class TitlePane extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
   componentDidMount = () => {};

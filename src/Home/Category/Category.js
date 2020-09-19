@@ -14,10 +14,10 @@ class Category extends React.Component {
       <div className="wrapper">
         <div className="card">
           <img src={cate.picLink} alt="blue" />
-          <div className="info">
+          <div className="info-cate">
             <h3>{cate.name}</h3>
             <p>{cate.description}</p>
-            <Link className="btn">Read more </Link>
+            <Link className="btn">See more </Link>
           </div>
         </div>
       </div>

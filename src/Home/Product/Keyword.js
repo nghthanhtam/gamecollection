@@ -3,7 +3,7 @@ import "../../assets/css/category.css";
 
 class Keyword extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
 
