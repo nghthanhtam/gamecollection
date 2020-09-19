@@ -2,7 +2,7 @@ import React from "react";
 import "../../assets/css/user-profile.css";
 import history from "../history";
 
-class Account extends React.Component {
+class ProfileItem extends React.Component {
   constructor(props) {
     super();
   }
@@ -13,7 +13,7 @@ class Account extends React.Component {
     let { item } = this.props;
 
     return (
-      <div onClick={() => history.push("/home")} className="pro-item">
+      <div onClick={() => history.push(item.link)} className="pro-item">
         <div>{item.name}</div>
         <i className="fa fa-angle-right"></i>
       </div>
@@ -21,4 +21,4 @@ class Account extends React.Component {
   }
 }
 
-export default Account;
+export default ProfileItem;

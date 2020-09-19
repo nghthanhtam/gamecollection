@@ -12,6 +12,7 @@ import Cart from "./Home/Checkout/Cart";
 import Payment from "./Home/Checkout/Payment";
 import OrderReceipt from "./Home/Checkout/OrderReceipt";
 import Account from "./Home/User/Account";
+import LaterList from "./Home/User/LaterList";
 import history from "./Home/history";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       <Route exact path="/checkout/payment" component={Payment} />
       <Route exact path="/checkout/order-received" component={OrderReceipt} />
       <Route exact path="/user/account" component={Account} />
+      <Route exact path="/user/later-list" component={LaterList} />
     </Router>
   );
 }

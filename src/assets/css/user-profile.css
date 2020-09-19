@@ -11,14 +11,17 @@
   padding: 30px;
   background-color: white;
   width: 60%;
+  margin: 10px 0 0 20px;
 }
 .pro-list {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin-right: 20px;
+
   width: 20%;
   padding: 20px;
+  height: "screenHeight";
+  margin-top: 10px;
 }
 .pro-item {
   width: 100%;
@@ -29,6 +32,7 @@
   align-items: center;
   font-size: 17px;
   padding: 10px;
+  margin-bottom: 15px;
 }
 .pro-item i {
   margin-left: 30px;
@@ -36,4 +40,12 @@
 .pro-item:hover {
   color: #3571a7;
   cursor: pointer;
+}
+
+/* Later List */
+.later-order-list {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 10px;
 }

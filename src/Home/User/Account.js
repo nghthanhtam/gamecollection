@@ -5,16 +5,16 @@ import "../../assets/css/user-profile.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import ProfileItem from "./ProfileItem";
+
+import UserProfile from "./UserProfile";
 
 class Account extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      productList: [1, 2, 3, 4, 5, 6, 7, 8],
       profileItemList: [
         { name: "Thông tin khách hàng" },
-        { name: "Sản phẩm mua sau" },
+        { name: "Sản phẩm mua sau", link: "/user/later-list" },
       ],
       header: "header",
       picLink: "./img/blue.png",
@@ -41,9 +41,11 @@ class Account extends React.Component {
     });
   };
 
-  render() {
-    let { profileItemList } = this.state;
+  componentDidMount = () => {
+    console.log(this.props);
+  };
 
+  render() {
     return (
       <div>
         <Header />
@@ -65,36 +67,7 @@ class Account extends React.Component {
               padding: "20px",
             }}
           >
-            <div className="pro-list">
-              {profileItemList.map((item) => {
-                return <ProfileItem item={item} />;
-              })}
-
-              <div className="pro-item">
-                <div>Quản lý đơn hàng</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-              <div className="pro-item">
-                <div>Sổ địa chỉ</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-              <div className="pro-item">
-                <div>Thông tin thanh toán</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-              <div className="pro-item">
-                <div>Nhận xét đã viết</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-              <div className="pro-item">
-                <div>Sản phẩm đã xem qua</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-              <div className="pro-item">
-                <div>Sản phẩm mua sau</div>
-                <i className="fa fa-angle-right"></i>
-              </div>
-            </div>
+            <UserProfile />
 
             <div className="acc-container">
               <form
@@ -132,7 +105,11 @@ class Account extends React.Component {
                 </div>
 
                 <button
-                  style={{ backgroundColor: "#3571a7", color: "white" }}
+                  style={{
+                    backgroundColor: "#3571a7",
+                    color: "white",
+                    fontWeight: "400",
+                  }}
                   className="ui button"
                   type="submit"
                 >
