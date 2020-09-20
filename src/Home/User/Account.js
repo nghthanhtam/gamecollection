@@ -42,7 +42,7 @@ class Account extends React.Component {
   };
 
   componentDidMount = () => {
-    console.log(this.props);
+    // console.log(this.props);
   };
 
   render() {
@@ -59,7 +59,6 @@ class Account extends React.Component {
           }}
         >
           <div className="nohome-section"></div>
-
           <div
             style={{
               display: "flex",
@@ -67,11 +66,11 @@ class Account extends React.Component {
               padding: "20px",
             }}
           >
-            <UserProfile />
+            <UserProfile selectedItem={this.props} />
 
             <div className="acc-container">
               <form
-                style={{ fontFamily: "Poppins, sans-serif;", color: "#0d1136" }}
+                style={{ fontFamily: "Poppins, sans-serif", color: "#0d1136" }}
                 className="ui form"
               >
                 <div className="field">

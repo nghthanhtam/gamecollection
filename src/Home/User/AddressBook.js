@@ -5,19 +5,13 @@ import "../../assets/css/user-profile.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import LaterListDetail from "./LaterListDetail";
+
 import UserProfile from "./UserProfile";
 
-class LaterList extends React.Component {
+class AddressBook extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      productList: [1, 2, 3, 4, 5, 6, 7, 8],
-      orderList: [1, 2, 3, 4, 5],
-      profileItemList: [
-        { name: "Thông tin khách hàng" },
-        { name: "Sản phẩm mua sau" },
-      ],
       header: "header",
       picLink: "./img/blue.png",
       section: "section-blue",
@@ -44,8 +38,6 @@ class LaterList extends React.Component {
   };
 
   render() {
-    let { orderList } = this.state;
-
     return (
       <div>
         <Header />
@@ -59,7 +51,6 @@ class LaterList extends React.Component {
           }}
         >
           <div className="nohome-section"></div>
-
           <div
             style={{
               display: "flex",
@@ -68,10 +59,37 @@ class LaterList extends React.Component {
             }}
           >
             <UserProfile selectedItem={this.props} />
-            <div className="later-order-list">
-              {orderList.map((item) => {
-                return <LaterListDetail key={item._id} />;
-              })}
+
+            <div className="acc-container">
+              <div className="edit-text">+ Thêm địa chỉ</div>
+              <div className="address-det">
+                <div className="address-box">
+                  <p className="add-name">Nguyễn Huỳnh Thanh Tâm</p>
+                  <div className="add">
+                    <p className="add1">Địa chỉ:</p>
+                    <p>679 Lê Đức Thọ, P15, Gò Vấp , TPHCM</p>
+                  </div>
+                  <div className="row-flex">
+                    <p className="tel1">Điện thoại:</p>
+                    <p>0778895138</p>
+                  </div>
+                </div>
+                <div className="edit-text">Chỉnh sửa</div>
+              </div>
+              <div className="address-det">
+                <div className="address-box">
+                  <p className="add-name">Nguyễn Huỳnh Thanh Tâm</p>
+                  <div className="add">
+                    <p className="add1">Địa chỉ:</p>
+                    <p>679 Lê Đức Thọ, P15, Gò Vấp , TPHCM</p>
+                  </div>
+                  <div className="row-flex">
+                    <p className="tel1">Điện thoại:</p>
+                    <p>0778895138</p>
+                  </div>
+                </div>
+                <div className="edit-text">Chỉnh sửa</div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,4 +100,4 @@ class LaterList extends React.Component {
   }
 }
 
-export default LaterList;
+export default AddressBook;

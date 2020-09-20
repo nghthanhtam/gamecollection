@@ -38,7 +38,7 @@
   margin: 10px 0 -10px 20px;
   background-color: white;
   display: flex;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   color: #0d1136;
 }
 
@@ -152,9 +152,11 @@
 .add1 {
   margin-right: 5px;
   margin-bottom: -1px;
+  color: grey;
 }
 .tel1 {
   margin-right: 5px;
+  color: grey;
 }
 .pm-container {
   padding-top: 30px;

@@ -193,7 +193,7 @@ class Home extends React.Component {
             <div>
               <div className="section-red">
                 <div className={this.state.header}>
-                  <Link className="logo" to="/">
+                  <Link className="logo" to="/home">
                     Logo
                   </Link>
                   <ul>

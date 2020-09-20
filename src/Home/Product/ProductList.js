@@ -73,9 +73,7 @@ class ProductList extends React.Component {
             backgroundColor: "#f7f7f7",
           }}
         >
-          <div className="nohome-section">
-            <img alt="banner" src="./img/moon.png" />
-          </div>
+          <div className="nohome-section"></div>
 
           <div
             style={{
@@ -85,10 +83,10 @@ class ProductList extends React.Component {
             }}
           >
             <div className="filter-list">
-              <div class="ui action input">
+              <div className="ui action input">
                 <input type="text" placeholder="Search..." />
-                <button class="ui icon button">
-                  <i class="search icon"></i>
+                <button className="ui icon button">
+                  <i className="search icon"></i>
                 </button>
               </div>
 
@@ -199,7 +197,7 @@ class ProductList extends React.Component {
                 <div className="row-flex-center">
                   <div style={{ marginRight: "10px" }}>Sort By</div>
                   <div>
-                    <select class="ui dropdown">
+                    <select className="ui dropdown">
                       <option value="">Price</option>
                       <option value="1">New stock</option>
                       <option value="0">Rate</option>
@@ -210,8 +208,8 @@ class ProductList extends React.Component {
               <div>
                 <div className="list-wrapper">
                   <div className="grid">
-                    {productList.map(() => {
-                      return <Product />;
+                    {productList.map((item, index) => {
+                      return <Product key={index} />;
                     })}
                   </div>
                 </div>
@@ -229,8 +227,8 @@ class ProductList extends React.Component {
                 }}
                 {...settings}
               >
-                {productList.map(() => {
-                  return <Product />;
+                {productList.map((item, index) => {
+                  return <Product key={index} />;
                 })}
               </Slider>
             </div>
@@ -245,8 +243,8 @@ class ProductList extends React.Component {
                   }}
                   {...settings}
                 >
-                  {productList.map(() => {
-                    return <Product />;
+                  {productList.map((item, index) => {
+                    return <Product key={index} />;
                   })}
                 </Slider>
               </div>

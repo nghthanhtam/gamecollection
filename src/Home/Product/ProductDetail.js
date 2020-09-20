@@ -36,9 +36,7 @@ class ProductDetail extends React.Component {
     return (
       <div>
         <Header />
-        <div className="nohome-section">
-          <img alt="banner" src="./img/moon.png" />
-        </div>
+        <div className="nohome-section"></div>
         <div className="container">
           <div className="card1">
             <div className="image">

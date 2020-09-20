@@ -45,46 +45,6 @@ class LaterListDetail extends React.Component {
             <div className="percent">-50%</div>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "white",
-              height: "35px",
-              width: "35px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "1px solid #ccc",
-            }}
-          >
-            <i className="fa fa-minus"></i>
-          </div>
-          <input
-            style={{
-              width: "50px",
-              height: "35px",
-              textAlign: "center",
-              border: "1px solid #ccc",
-            }}
-          />
-          <div
-            style={{
-              backgroundColor: "white",
-              height: "35px",
-              width: "35px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "1px solid #ccc",
-            }}
-          >
-            <i className="fa fa-plus"></i>
-          </div>
-        </div>
       </div>
     );
   }

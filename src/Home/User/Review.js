@@ -5,23 +5,18 @@ import "../../assets/css/user-profile.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import LaterListDetail from "./LaterListDetail";
+import Product from "../Product/Product";
 import UserProfile from "./UserProfile";
 
-class LaterList extends React.Component {
+class Account extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      productList: [1, 2, 3, 4, 5, 6, 7, 8],
-      orderList: [1, 2, 3, 4, 5],
-      profileItemList: [
-        { name: "Thông tin khách hàng" },
-        { name: "Sản phẩm mua sau" },
-      ],
       header: "header",
       picLink: "./img/blue.png",
       section: "section-blue",
       left: 0,
+      productList: [1, 2, 3, 4, 5, 6, 7, 8],
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -44,8 +39,7 @@ class LaterList extends React.Component {
   };
 
   render() {
-    let { orderList } = this.state;
-
+    let { productList } = this.state;
     return (
       <div>
         <Header />
@@ -59,7 +53,6 @@ class LaterList extends React.Component {
           }}
         >
           <div className="nohome-section"></div>
-
           <div
             style={{
               display: "flex",
@@ -68,10 +61,15 @@ class LaterList extends React.Component {
             }}
           >
             <UserProfile selectedItem={this.props} />
-            <div className="later-order-list">
-              {orderList.map((item) => {
-                return <LaterListDetail key={item._id} />;
-              })}
+
+            <div className="acc-container">
+              <div className="row-flex">
+                <div className="grid-review">
+                  {productList.map((item, index) => {
+                    return <Product key={index} />;
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,4 +80,4 @@ class LaterList extends React.Component {
   }
 }
 
-export default LaterList;
+export default Account;

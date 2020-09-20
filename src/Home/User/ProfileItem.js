@@ -7,13 +7,18 @@ class ProfileItem extends React.Component {
     super();
   }
 
-  onProfileitemClick = () => {};
-
   render() {
-    let { item } = this.props;
+    let { item, selectedItem } = this.props;
 
     return (
-      <div onClick={() => history.push(item.link)} className="pro-item">
+      <div
+        onClick={() => {
+          history.push(item.link, { selectedItem: item.link });
+        }}
+        className={
+          selectedItem === item.link ? "pro-item-selected" : "pro-item"
+        }
+      >
         <div>{item.name}</div>
         <i className="fa fa-angle-right"></i>
       </div>

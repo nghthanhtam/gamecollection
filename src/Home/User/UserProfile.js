@@ -10,42 +10,32 @@ class UserProfile extends React.Component {
     this.state = {
       profileItemList: [
         { name: "Thông tin khách hàng", link: "/user/account" },
+        { name: "Quản lý đơn hàng", link: "/user/order-his" },
+        { name: "Sổ địa chỉ", link: "/user/address-book" },
+        { name: "Nhận xét sản phẩm đã mua", link: "/user/review" },
         { name: "Sản phẩm mua sau", link: "/user/later-list" },
+        { name: "Sản phẩm yêu thích", link: "/user/wishlist" },
+        { name: "Sản phẩm đã xem", link: "/user/watchlist" },
       ],
     };
   }
 
   render() {
     let { profileItemList } = this.state;
+    let selectedItem = !this.props.selectedItem.location.state
+      ? ""
+      : this.props.selectedItem.location.state.selectedItem;
 
     return (
       <div className="pro-list">
-        {profileItemList.map((item) => {
-          return <ProfileItem item={item} />;
+        {profileItemList.map((item, index) => {
+          return (
+            <ProfileItem key={index} item={item} selectedItem={selectedItem} />
+          );
         })}
 
         <div className="pro-item">
-          <div>Quản lý đơn hàng</div>
-          <i className="fa fa-angle-right"></i>
-        </div>
-        <div className="pro-item">
-          <div>Sổ địa chỉ</div>
-          <i className="fa fa-angle-right"></i>
-        </div>
-        <div className="pro-item">
           <div>Thông tin thanh toán</div>
-          <i className="fa fa-angle-right"></i>
-        </div>
-        <div className="pro-item">
-          <div>Nhận xét đã viết</div>
-          <i className="fa fa-angle-right"></i>
-        </div>
-        <div className="pro-item">
-          <div>Sản phẩm đã xem qua</div>
-          <i className="fa fa-angle-right"></i>
-        </div>
-        <div className="pro-item">
-          <div>Sản phẩm mua sau</div>
           <i className="fa fa-angle-right"></i>
         </div>
       </div>

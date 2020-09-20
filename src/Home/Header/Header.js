@@ -31,7 +31,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className={this.state.header}>
-        <Link className="logo" to="/">
+        <Link className="logo" to="/home">
           Logo
         </Link>
         <ul className="row-flex-center  ">
@@ -46,7 +46,7 @@ class Header extends React.Component {
                 padding: "8px",
                 borderRadius: "7px",
               }}
-              to="/cart"
+              to="/checkout/cart"
             >
               <div style={{ color: "white" }}>Cart</div>
               <div>

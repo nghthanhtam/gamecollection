@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import LaterListDetail from "./LaterListDetail";
 import UserProfile from "./UserProfile";
 
-class LaterList extends React.Component {
+class Wishlist extends React.Component {
   constructor(props) {
     super();
     this.state = {
@@ -82,4 +82,4 @@ class LaterList extends React.Component {
   }
 }
 
-export default LaterList;
+export default Wishlist;

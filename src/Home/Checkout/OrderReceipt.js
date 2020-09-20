@@ -1,9 +1,6 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import "font-awesome/css/font-awesome.min.css";
 import "../../assets/css/cart.css";
-import { Link } from "react-router-dom";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -24,14 +21,10 @@ class OrderReceipt extends React.Component {
     this.setState({ replyBoxHidden: !replyBoxHidden });
   };
   render() {
-    let {} = this.state;
-
     return (
       <div>
         <Header />
-        <div className="nohome-section">
-          <img alt="banner" src="./img/moon.png" />
-        </div>
+        <div className="nohome-section"></div>
         <div className="receipt-container">
           <div className="order-res-card">
             <div className="res-infor">
